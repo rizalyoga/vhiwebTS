@@ -1,14 +1,14 @@
-# vhiwebTS
+# vhiwebTS | Employee
 
-# ![WebApp](https://iharsh234.github.io/WebApp/images/demo/demo_landing.JPG)
+# ![Employee](https://github.com/rizalyoga/vhiwebTS/blob/main/SS/home.png)
 
-# WebApp
+# Employee
 
 <table>
 <tr>
 <td>
-  Employee adalah sebuah website yang menggunakan fake API dari https://reqres.in/ untuk menampilkan data dari beberapa orang. Employee merupakan tahap kedua dari proses recruitment di
-  Vhiweb ( PT. Duta Digital Nusantara ).
+Employee is a website that uses the fake API from https://reqres.in/ to display data from multiple people. Employee is the second stage of the recruitment process in
+Vhiweb (PT. Duta Digital Nusantara).
 </td>
 </tr>
 </table>
@@ -21,48 +21,28 @@ Here is a working live demo : vhiwebts-rizalyoga.netlify.app/
 
 ### Login Page
 
-![](https://iharsh234.github.io/WebApp/images/demo/web_app_face.JPG)
+![](https://github.com/rizalyoga/vhiwebTS/blob/main/SS/login.png)
 
-### Query Filled Form
+### Home Page
 
-![](https://iharsh234.github.io/WebApp/images/demo/demo_query.JPG)
+![](https://github.com/rizalyoga/vhiwebTS/blob/main/SS/home.png)
 
-### Charts
+### Users Page
 
-![](https://iharsh234.github.io/WebApp/images/demo/demo_chart1.JPG)
-![](https://iharsh234.github.io/WebApp/images/demo/demo_chart2.JPG)
-![](https://iharsh234.github.io/WebApp/images/demo/demo_chart3.JPG)
+![](https://github.com/rizalyoga/vhiwebTS/blob/main/SS/user.png)
 
-## Mobile support
+### Detail User Page
+
+![](https://github.com/rizalyoga/vhiwebTS/blob/main/SS/detail.png)
+
+<!-- ## Mobile support
 
 The WebApp is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
 
-![](https://iharsh234.github.io/WebApp/images/demo/mobile.png)
-
-## [Usage](https://iharsh234.github.io/WebApp/)
-
-### Development
-
-Want to contribute? Great!
-
-To fix a bug or enhance an existing module, follow these steps:
-
-- Fork the repo
-- Create a new branch (`git checkout -b improve-feature`)
-- Make the appropriate changes in the files
-- Add changes to reflect the changes made
-- Commit your changes (`git commit -am 'Improve feature'`)
-- Push to the branch (`git push origin improve-feature`)
-- Create a Pull Request
-
-### Bug / Feature Request
-
-If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/iharsh234/WebApp/issues/new) by including your search query and the expected result.
-
-If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/iharsh234/WebApp/issues/new). Please include sample queries and their corresponding results.
+![](https://iharsh234.github.io/WebApp/images/demo/mobile.png) -->
 
 ## Built with
 
-- [jQuery - Ajax](http://www.w3schools.com/jquery/jquery_ref_ajax.asp) - jQuery simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.
-- [Google Chart API](https://developers.google.com/chart/interactive/docs/quick_start) - Free , Rich Gallery , Customizable and Cross-browser compatible.
-- [Bootstrap](http://getbootstrap.com/) - Extensive list of components and Bundled Javascript plugins.
+- [React JS](https://reactjs.org/) - React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.
+- [Tailwind CSS](https://tailwindcss.com/) - Tailwind CSS is a design system implementation in pure CSS. It is also configurable. It gives developers super powers. It allows them to build websites with a clean consistent UI out of the box. It integrates well with any web dev framework.
+- [reqres](https://reqres.in/) - reqres is a website that provides a fake data API that can be used for testing on the front end.
