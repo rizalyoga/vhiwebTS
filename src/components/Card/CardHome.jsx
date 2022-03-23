@@ -14,7 +14,7 @@ const CardHome = ({ dataUsers }) => {
           <img className="object-cover rounded-t-md w-full h-56" src={user.avatar} alt="avatar" />
           <div className="py-5 text-center">
             <p className="block text-2xl font-bold text-gray-800 dark:text-white">
-              {user.first_name} {user.first_name}
+              {user.first_name} {user.last_name}
             </p>
           </div>
         </div>
