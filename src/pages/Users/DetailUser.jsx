@@ -8,7 +8,7 @@ const DetailUser = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
 
-  const { userDetail } = useSelector((state) => state.userDetail);
+  const { userDetail, loading } = useSelector((state) => state.userDetail);
 
   useEffect(() => {
     dispatch(getUserDetail(id));
@@ -16,7 +16,15 @@ const DetailUser = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center ">
-      <CardUser detailUser={userDetail} />
+      {loading ? (
+        <div className="w-full bg-white flex justify-center items-center" style={{ height: "100vh" }}>
+          <h1 className="text-center text-white" style={{ margin: "auto" }}>
+            PLEASE WAIT ...
+          </h1>
+        </div>
+      ) : (
+        <CardUser detailUser={userDetail} />
+      )}
     </div>
   );
 };

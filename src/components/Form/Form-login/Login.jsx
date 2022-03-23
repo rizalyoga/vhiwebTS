@@ -74,7 +74,7 @@ const LoginForm = () => {
             )}
           </div>
           <div className="flex justify-end mt-6">
-            <button className="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-slate-900 focus:outline-none focus:bg-gray-600">{loading ? <LoadingBtn /> : <>Save</>}</button>
+            <button className="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-slate-900 focus:outline-none focus:bg-gray-600">{loading ? <LoadingBtn /> : <>Login</>}</button>
           </div>
         </form>
       </section>

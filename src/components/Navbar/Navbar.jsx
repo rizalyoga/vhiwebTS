@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const tokens = sessionStorage.getItem("token");
   const navigate = useNavigate();
-  const [visible, setVisible] = useState(false);
-  const hidden = "";
 
   /* ----------------------------- logout function ---------------------------- */
   const logOut = () => {
-    sessionStorage.clear();
-    document.location.href = "/";
+    Swal.fire({
+      text: "Are you sure to logout?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#818CF8",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        sessionStorage.clear();
+        document.location.href = "/";
+      }
+    });
   };
 
   const toUsers = () => {
@@ -21,15 +31,6 @@ const Navbar = () => {
     navigate("/");
   };
 
-  // const showMenu = () => {
-  //   setVisible((show) => !show);
-  //   if (visible) {
-  //     hidden = "hidden";
-  //   } else {
-  //     hidden = "";
-  //   }
-  // };
-
   if (!tokens) {
     return <></>;
   } else {
@@ -38,7 +39,7 @@ const Navbar = () => {
         <div className="row wraper mx-auto px-3 lg:px-0 w-full flex  ">
           <div className="left-col w-6/12 flex items-center gap-5">
             <h1 className="font-logo tracking-wider text-gray-700 cursor-pointer font-bold text-xl lg:text-2xl ">Employee</h1>
-            <div className="hidden md:flex list-menu items-center gap-3 mt-1">
+            <div className="flex list-menu items-center gap-3 lg:mt-2 mt-1 ">
               <p onClick={toHome} className="cursor-pointer hover:text-white active:text-black transition ease-in">
                 Home
               </p>

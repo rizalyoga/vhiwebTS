@@ -33,13 +33,13 @@ const Home = () => {
   }
 
   return (
-    <div className="mt-20">
+    <div className="mt-20 min-h-[90vh]">
       <div className="wraper mx-auto px-3 lg:px-0">
         <CardHome dataUsers={data} />
         <div className="button w-full flex justify-center">
           <button
             onClick={showMore}
-            className="bg-indigo-300 mt-2 mb-5 flex items-center px-2 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
+            className="bg-indigo-300 mt-2 mb-5 flex items-center px-2 py-2 font-medium tracking-wide capitalize transition-colors duration-200 transform rounded-md hover:bg-indigo-500 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-80"
           >
             <span className="mx-1 text-gray-800">Show more</span>
           </button>
