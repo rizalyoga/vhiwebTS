@@ -5,7 +5,7 @@ const Card = ({ detailUser }) => {
   return (
     <div className="mx-2 min-w-[95%] md:min-w-[70%] lg:min-w-[40%] ">
       <div className="bg-indigo-300 h-40 rounded-t-lg"></div>
-      <div className="flex dark:bg-gray-800 justify-center -mt-20 ">
+      <div className="flex justify-center -mt-20 ">
         <img className="object-cover w-40 h-40 border-4 border-gray-200 rounded-full dark:border-blue-400" alt="Testimonial avatar" src={detailUser?.data?.avatar} />
       </div>
       <div className="px-8 flex flex-col items-center md:py-4 mx-auto bg-white rounded-lg shadow-lg dark:bg-gray-800">
