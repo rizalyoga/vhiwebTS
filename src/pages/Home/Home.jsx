@@ -12,8 +12,10 @@ const Home = () => {
   let [page, setPage] = useState(1);
 
   useEffect(() => {
-    dispatch(getUsers(page));
-  }, [dispatch, page]);
+    if (tokens) {
+      dispatch(getUsers(page));
+    }
+  }, [dispatch, page, tokens]);
 
   useEffect(() => {
     if (users) {

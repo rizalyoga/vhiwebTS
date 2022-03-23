@@ -32,7 +32,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <section className=" wraper mx-2 w-full md:w-5/12 p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+      <section className=" wraper mx-2 w-11/12 md:w-7/12 lg:w-5/12 p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
         <h2 className="font-logo tracking-widest text-2xl text-center font-semibold text-gray-700 capitalize dark:text-white">Please Login</h2>
 
         <form onSubmit={handleSumbit}>
