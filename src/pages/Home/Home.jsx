@@ -8,27 +8,12 @@ const Home = () => {
   const dispatch = useDispatch();
   const tokens = sessionStorage.getItem("token");
   const { users } = useSelector((state) => state.users);
-  const [data, setData] = useState([]);
-  let [page, setPage] = useState(1);
 
   useEffect(() => {
     if (tokens) {
-      dispatch(getUsers(page));
+      dispatch(getUsers());
     }
-  }, [dispatch, page, tokens]);
-
-  useEffect(() => {
-    if (users) {
-      setData(users);
-    }
-  }, [users]);
-
-  const showMore = (e) => {
-    e.preventDefault();
-    if (page < data.total_pages) {
-      setPage((page += 1));
-    }
-  };
+  }, [dispatch, tokens]);
 
   if (!tokens) {
     return <LoginPage />;
@@ -36,16 +21,8 @@ const Home = () => {
 
   return (
     <div className="mt-20 min-h-[90vh]">
-      <div className="wraper mx-auto px-3 lg:px-0">
-        <CardHome dataUsers={data} />
-        <div className="button w-full flex justify-center">
-          <button
-            onClick={showMore}
-            className="bg-indigo-300 mt-2 mb-5 flex items-center px-2 py-2 font-medium tracking-wide capitalize transition-colors duration-200 transform rounded-md hover:bg-indigo-500 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-80"
-          >
-            <span className="mx-1 text-gray-800">Show more</span>
-          </button>
-        </div>
+      <div className="wraper mx-auto px-3 lg:px-0 mb-10">
+        <CardHome dataUsers={users} />
       </div>
     </div>
   );
