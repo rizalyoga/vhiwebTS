@@ -4,9 +4,9 @@ import { MdOutlineMail } from "react-icons/md";
 const Card = ({ detailUser }) => {
   return (
     <div className="mx-2 min-w-[95%] md:min-w-[70%] lg:min-w-[40%] ">
-      <div className="bg-sky-400 h-40 rounded-t-lg"></div>
+      <div className="bg-indigo-300 h-40 rounded-t-lg"></div>
       <div className="flex justify-center -mt-20 ">
-        <img className="object-cover w-40 h-40 border-2 border-blue-300 rounded-full dark:border-blue-400" alt="Testimonial avatar" src={detailUser?.data?.avatar} />
+        <img className="object-cover w-40 h-40 border-4 border-gray-200 rounded-full dark:border-blue-400" alt="Testimonial avatar" src={detailUser?.data?.avatar} />
       </div>
       <div className="px-8 md:py-4 mx-auto bg-white rounded-lg shadow-lg dark:bg-gray-800">
         <h2 className="mt-5  text-center text-xl font-semibold text-gray-800 dark:text-white md:mt-0 md:text-3xl">

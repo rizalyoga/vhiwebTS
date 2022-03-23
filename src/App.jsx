@@ -4,8 +4,8 @@ import Home from "./pages/Home/Home";
 import Users from "./pages/Users/Users";
 import UsersDetail from "./pages/Users/DetailUser";
 import NotFoundPage from "./pages/404/NotFound";
-// import LoginPage from "./pages/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/users" element={<Users />} />
         <Route path="/users/:id" element={<UsersDetail />} />
-        {/* <Route path="/login" element={<LoginPage />} /> */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

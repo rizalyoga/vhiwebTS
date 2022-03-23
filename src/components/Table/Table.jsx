@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Table = ({ dataUser }) => {
   const navigate = useNavigate();
 
-  const titleHeading = ["No", "First Name", "Email"];
+  const titleHeading = ["No", "Name", "Email"];
 
   const toDetail = (id) => {
     navigate(`/users/${id}`);
