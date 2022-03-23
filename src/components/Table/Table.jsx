@@ -31,6 +31,7 @@ const Table = ({ dataUser }) => {
                   <div className="flex-shrink-0 h-10 w-10">
                     <img className="h-10 w-10 md:ml-4 rounded-full" src={person.avatar} alt="" />
                   </div>
+
                   <div className="ml-4 w-full">
                     <div className="text-sm font-medium text-gray-900 lg:-ml-14 text-center">
                       {person.first_name} {person.last_name}

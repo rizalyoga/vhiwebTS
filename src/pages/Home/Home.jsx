@@ -6,8 +6,8 @@ import LoginPage from "../../pages/Login/Login";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { users } = useSelector((state) => state.users);
   const tokens = sessionStorage.getItem("token");
+  const { users } = useSelector((state) => state.users);
   const [data, setData] = useState([]);
   let [page, setPage] = useState(1);
 

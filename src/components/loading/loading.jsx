@@ -6,7 +6,6 @@ export const LoadingBtn = () => {
       <div className="ldio-18077dubals">
         <div></div>
       </div>
-      {/* <p className="text-xl text-bold">please wait</p> */}
     </div>
   );
 };

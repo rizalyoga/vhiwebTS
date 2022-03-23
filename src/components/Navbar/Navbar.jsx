@@ -23,6 +23,7 @@ const Navbar = () => {
     });
   };
 
+  /* --------------------------- navigation function -------------------------- */
   const toUsers = () => {
     navigate("/users");
   };
