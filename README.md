@@ -1,6 +1,6 @@
 # vhiwebTS | Employee
 
-# ![Employee](https://github.com/rizalyoga/vhiwebTS/blob/main/SS/home.png)
+# ![Employee](https://github.com/rizalyoga/vhiwebTS/blob/main/SS/cover.png)
 
 # Employee
 
