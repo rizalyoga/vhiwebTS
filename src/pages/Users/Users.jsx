@@ -17,7 +17,7 @@ const Users = () => {
   };
 
   return (
-    <div className="mt-20 min-h-[90vh]">
+    <div className="mt-20 md:mt-40 min-h-[90vh]">
       <div className="wraper mx-auto px-3 lg:px-0">
         <Table dataUser={users} />
         <div className="flex flex-row justify-center gap-2 w-full ">

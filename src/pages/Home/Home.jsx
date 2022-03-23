@@ -35,7 +35,7 @@ const Home = () => {
   }
 
   return (
-    <div className="mt-20 min-h-[90vh]">
+    <div className="mt-20 min-h-[90vh] mb-10">
       <div className="wraper mx-auto px-3 lg:px-0">
         <CardHome dataUsers={data} />
         <div className="button w-full flex justify-center">
