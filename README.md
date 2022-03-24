@@ -35,6 +35,10 @@ Here is a working live demo : https://vhiwebts-rizalyoga.netlify.app/
 
 ![](https://github.com/rizalyoga/vhiwebTS/blob/main/SS/detail.png)
 
+### Error Page Not found
+
+![](https://github.com/rizalyoga/vhiwebTS/blob/main/SS/pagenotfound.png)
+
 <!-- ## Mobile support
 
 The WebApp is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
