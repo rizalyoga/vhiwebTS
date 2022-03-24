@@ -9,24 +9,34 @@ const LoginForm = () => {
   const [errors, setErrors] = useState("");
   const [loading, setLoading] = useState(false);
 
-  /* ----------------------------- login function ----------------------------- */
+  /* ----------------------------- handle login function ----------------------------- */
   const handleSumbit = async (e) => {
     e.preventDefault();
-    const authUser = { email, password };
+    console.log(password);
+    console.log(email);
+    if (password === "cityslicka") {
+      const authUser = { email: email.replace(/\s+/g, ""), password: password };
 
-    setLoading(true);
-    await axios
-      .post("https://reqres.in/api/login", authUser)
-      .then((response) => {
-        sessionStorage.setItem("token", response.data.token);
-        document.location.reload();
-      })
-      .catch((err) => {
-        setErrors(err.response.data.error);
-      })
-      .finally(() => setLoading(false));
+      setLoading(true);
+      await axios
+        .post("https://reqres.in/api/login", authUser)
+        .then((response) => {
+          sessionStorage.setItem("token", response.data.token);
+          document.location.reload();
+        })
+        .catch((err) => {
+          setErrors(err.response.data.error);
+        })
+        .finally(() => setLoading(false));
+    } else {
+      setErrors("Please check your password");
+    }
   };
-  /* -------------------------------- component ------------------------------- */
+
+  /* -------------------------------hidden error onFocus ------------------------------ */
+  const handlerFocusError = () => {
+    setErrors("");
+  };
 
   return (
     <>
@@ -52,10 +62,11 @@ const LoginForm = () => {
                 placeholder="email"
                 required
                 onChange={(e) => setEmail(e.target.value)}
+                onFocus={handlerFocusError}
               />
             </div>
 
-            <div className="mt-2">
+            <div className="mt-2 ">
               <label className=" text-gray-700 dark:text-gray-200" htmlFor="password">
                 Password
               </label>
@@ -66,7 +77,8 @@ const LoginForm = () => {
                 placeholder="password"
                 required
                 onChange={(e) => setPassword(e.target.value)}
-              />
+                onFocus={handlerFocusError}
+              ></input>
             </div>
           </div>
           <div>
