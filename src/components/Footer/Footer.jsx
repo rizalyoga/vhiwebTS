@@ -7,7 +7,7 @@ const Footer = () => {
     return <></>;
   }
   return (
-    <div className="w-full py-5 bg-gray-300 h-14 flex justify-center items-center">
+    <div className="w-full py-5 bg-slate-300 h-14 flex justify-center items-center">
       <div className="wraper ">
         <p className="font-logo tracking-wider text-gray-800 text-xl">~ Employee ~</p>
       </div>

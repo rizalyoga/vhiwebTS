@@ -13,7 +13,7 @@ const Navbar = () => {
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#818CF8",
-      cancelButtonColor: "#d33",
+      cancelButtonColor: "#374151",
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
@@ -36,7 +36,7 @@ const Navbar = () => {
     return <></>;
   } else {
     return (
-      <nav className="fixed top-0 bg-gray-300 h-14 w-full flex items-center">
+      <nav className="fixed top-0 bg-slate-300 h-14 w-full flex items-center">
         <div className="row wraper mx-auto px-3 lg:px-0 w-full flex  ">
           <div className="left-col w-9/12 md:w-6/12 flex items-center gap-5">
             <h1 className="font-logo tracking-wider text-gray-700 cursor-pointer font-bold text-xl lg:text-2xl ">Employee</h1>
