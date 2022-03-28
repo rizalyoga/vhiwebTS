@@ -13,8 +13,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/users/:id" element={<UsersDetail />} />
+        <Route path="users" element={<Users />} />
+        <Route path="users/:id" element={<UsersDetail />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
