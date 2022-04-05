@@ -17,7 +17,7 @@ const Home = () => {
 
   useEffect(() => {
     if (users.data) {
-      setData([...data, ...users.data]);
+      setData((data) => [...data, ...users.data]);
     }
   }, [users]);
 
