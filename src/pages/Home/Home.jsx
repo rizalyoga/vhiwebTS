@@ -13,10 +13,12 @@ const Home = () => {
 
   useEffect(() => {
     tokens && dispatch(getUsers(page));
-  }, [dispatch, page, tokens]);
+  }, [dispatch, page]);
 
   useEffect(() => {
-    setData(users.data);
+    if (users.data) {
+      setData([...data, ...users.data]);
+    }
   }, [users]);
 
   const showMore = (e) => {
@@ -25,8 +27,6 @@ const Home = () => {
       setPage((page += 1));
     }
   };
-
-  console.log(data);
 
   if (!tokens) {
     return <LoginPage />;
