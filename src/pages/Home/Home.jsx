@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     tokens && dispatch(getUsers(page));
-  }, [dispatch, page]);
+  }, [dispatch, page, tokens]);
 
   useEffect(() => {
     if (users.data) {
