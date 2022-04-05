@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../../store/action/GetUsers";
 import CardHome from "../../components/Card/CardHome";
@@ -8,8 +8,6 @@ const Home = () => {
   const dispatch = useDispatch();
   const tokens = sessionStorage.getItem("token");
   const { users } = useSelector((state) => state.users);
-  const [data, setData] = useState([]);
-  let [page, setPage] = useState(1);
 
   useEffect(() => {
     tokens && dispatch(getUsers(page));

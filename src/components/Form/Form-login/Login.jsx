@@ -9,24 +9,34 @@ const LoginForm = () => {
   const [errors, setErrors] = useState("");
   const [loading, setLoading] = useState(false);
 
-  /* ----------------------------- login function ----------------------------- */
+  /* ----------------------------- handle login function ----------------------------- */
   const handleSumbit = async (e) => {
     e.preventDefault();
-    const authUser = { email, password };
+    console.log(password);
+    console.log(email);
+    if (password === "cityslicka") {
+      const authUser = { email: email.replace(/\s+/g, ""), password: password };
 
-    setLoading(true);
-    await axios
-      .post("https://reqres.in/api/login", authUser)
-      .then((response) => {
-        sessionStorage.setItem("token", response.data.token);
-        document.location.reload();
-      })
-      .catch((err) => {
-        setErrors(err.response.data.error);
-      })
-      .finally(() => setLoading(false));
+      setLoading(true);
+      await axios
+        .post("https://reqres.in/api/login", authUser)
+        .then((response) => {
+          sessionStorage.setItem("token", response.data.token);
+          document.location.reload();
+        })
+        .catch((err) => {
+          setErrors(err.response.data.error);
+        })
+        .finally(() => setLoading(false));
+    } else {
+      setErrors("Please check your password");
+    }
   };
-  /* -------------------------------- component ------------------------------- */
+
+  /* -------------------------------hidden error onFocus ------------------------------ */
+  const handlerFocusError = () => {
+    setErrors("");
+  };
 
   return (
     <>
@@ -34,7 +44,8 @@ const LoginForm = () => {
         <h2 className="font-logo tracking-widest text-2xl text-center font-semibold text-gray-700 capitalize dark:text-white">Please Login</h2>
         <h2 className="text-center mt-3 text-gray-700 dark:text-white">
           Login acount : <br />
-          Email : eve.holt@reqres.in <br />
+          Email : eve.holt@reqres.in
+          <br />
           Pass : cityslicka
         </h2>
 
@@ -46,14 +57,16 @@ const LoginForm = () => {
               </label>
               <input
                 id="username"
-                type="text"
+                type="email"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 placeholder="email"
+                required
                 onChange={(e) => setEmail(e.target.value)}
+                onFocus={handlerFocusError}
               />
             </div>
 
-            <div className="mt-2">
+            <div className="mt-2 ">
               <label className=" text-gray-700 dark:text-gray-200" htmlFor="password">
                 Password
               </label>
@@ -62,8 +75,10 @@ const LoginForm = () => {
                 type="password"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                 placeholder="password"
+                required
                 onChange={(e) => setPassword(e.target.value)}
-              />
+                onFocus={handlerFocusError}
+              ></input>
             </div>
           </div>
           <div>
